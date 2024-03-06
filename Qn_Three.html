@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    body{
+        background-color: lavenderblush;
+        text-align: center;
+        font-family: 'Times New Roman', Times, serif;
+        padding: 200px;
+    }
+
+    #numberOne{
+        font-size: 25px;
+    }
+    #numberTwo{
+        font-size: 25px;
+    }
+    #numberThree{
+        font-size: 25px;
+    }
+    #max{
+        font-style: italic;
+        font-size: 25px;
+    }
+    button{
+
+        font-size: 25px;
+    }
+    
+</style>
+<body>
+
+
+    <!--QuestionThree
+  
+   Write a javascript function to return the maximum of 3 numbers.
+   Prompt for 3 inputs
+   Convert to numbers
+   Pass to the function
+   Use Math.max to get the maximum
+
+-->
+
+<h1>This cool function bot thingy returns maximum of three numbers</h1>
+    
+<div id="max">
+            
+<div id="input-group">
+                <label for="numberOne">Input your first number: </label>
+                <input type="text" id="numberOne">
+</div>
+<br>
+<div id="input-group">
+                <label for="numberTwo">Input your second number: </label>
+                <input type="text" id="numberTwo">
+</div>
+<br>
+<div id="input-group">
+                <label for="numberThree">Input your third number: </label>
+                <input type="text" id="numberThree">
+</div>
+<br>
+<div>
+            <button onclick="findMaximum()">Check maximum number </button>
+            <p id="result"></p>
+</div>
+
+
+
+<script>
+    function findMaximum() {
+      
+        let numberOne = parseFloat(document.getElementById("numberOne").value);
+        let numberTwo= parseFloat(document.getElementById("numberTwo").value);
+        let numberThree = parseFloat(document.getElementById("numberThree").value);
+    
+       
+        if (isNaN(numberOne) || isNaN(numberTwo) || isNaN(numberThree)) {
+            document.getElementById("result").innerText = "Please enter valid numbers.";
+            return;
+        }
+
+        let max = Math.max(numberOne, numberTwo, numberThree);
+        document.getElementById("result").innerText = "The maximum number is: " + max;
+      }
+</script>
+    
+
+</body>
+</html>
